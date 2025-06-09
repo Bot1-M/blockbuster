@@ -4,3 +4,26 @@ server:
 spring:
   application:
     name: BlockKot
+  datasource:
+    url: jdbc:postgresql://localhost:5431/BlockKot
+    username: postgres
+    password: 225566mM
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
+
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
