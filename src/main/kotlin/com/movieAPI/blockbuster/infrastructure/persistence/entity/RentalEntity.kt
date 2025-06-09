@@ -22,5 +22,5 @@ data class RentalEntity(
     val rentalDate: Date,
 
     @Column(name = "return_date")
-    val returnDate: Date
+    val returnDate: Date?
 )
