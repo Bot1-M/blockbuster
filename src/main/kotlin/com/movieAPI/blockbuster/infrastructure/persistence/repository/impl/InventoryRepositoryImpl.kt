@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository
 @Repository
 class InventoryRepositoryImpl(private val jpa: InventoryRepositoryJPA) : InventoryRepository {
 
-    override fun getAllInventoryRepository(): List<Inventory> {
+    override fun getAllInventory(): List<Inventory> {
         val listEntity = jpa.findAll()
         return listEntity.map { it.ToDomain() }
     }

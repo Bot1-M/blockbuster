@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository
 @Repository
 class RentalRepositoryImpl(private val jpa: RentalRepositoryJPA) : RentalRepository {
 
-    override fun getAllRentalRepository(): List<Rental> {
+    override fun getAllRental(): List<Rental> {
         val listEntity = jpa.findAll()
         return listEntity.map { it.ToDomain() }
     }
