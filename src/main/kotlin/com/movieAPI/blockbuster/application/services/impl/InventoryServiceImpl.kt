@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service
 
 @Service
 class InventoryServiceImpl(private val repository: InventoryRepository) : InventoryService {
+
     override fun getAll(): List<Inventory> {
         return repository.getAllInventory()
     }
+    
 }
